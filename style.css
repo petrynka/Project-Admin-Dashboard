@@ -13,7 +13,7 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: 18% 82%;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 20% 100%;
 }
 
 .header{
@@ -196,14 +196,7 @@ input:focus{
 }
 
 .nav-item:hover{
-    /* .nav-icon{
-        width: 11%;
-    }
-    .nav-text>a{
-        font-size: 22px;
-    } */
     transform: scale(1.05); 
-    
 }
 
 .nav-icon{
@@ -223,9 +216,175 @@ input:focus{
     font-weight: 500;
 }
 
+
+
+
+/*****************  MAIN STYLES  *******************************************************************/
+
 .main{
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     background-color: rgb(221, 222, 222);
+    display: flex;
 }
 
+.main-left{
+    width: 65%;
+    height: 100vh;
+}
+
+.main-left>p:first-child{
+    margin-left: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.projects-container{
+    display: grid;
+    width: 100%;
+    height: 90%;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-rows: repeat(auto-fit,minmax(1fr, 150px));
+    gap: 25px;
+    margin-left: 15px;
+    margin-top: 10px;
+    padding-bottom: 30px;
+    overflow: auto;
+}
+
+.project-item{
+    background-color: white;
+    border-radius: 10px;
+    border-left: 10px solid rgb(250, 188, 42);
+    position: relative;
+}
+
+.project-item>h3{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.project-item>p{
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(0, 0, 0, 0.4);
+    margin: 10px 15px 10px 15px;
+}
+
+.project-btns{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+}
+
+.project-btns>svg{
+    width: 20px;
+    height: 20px;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.project-btns>svg:hover{
+    transform: scale(1.15); 
+}
+
+.main-right{
+    width: 35%;
+    height: 100vh;
+}
+
+.main-announcement>h4{
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.announcement-content{
+    background-color: white;
+    width: 80%;
+    padding: 25px;
+    margin-left: 40px;
+    margin-top: 10px;
+    border-radius: 10px
+}
+
+.a-content-item>p{
+    font-size: 13px;
+    font-weight: 300;
+    color: rgb(0, 0, 0, 0.4);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);;
+}
+
+.announcement-content .a-content-item:last-child p{
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.main-trending>h4{
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.trending-content{
+    background-color: white;
+    width: 80%;
+    padding: 25px;
+    margin-left: 40px;
+    margin-top: 10px;
+    border-radius: 10px
+}
+
+.t-content-item{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.t-content-item-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: rgb(255, 201, 73);
+}
+
+.t-content-item-text{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.t-content-item-text>p:first-child{
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 3px;
+}
+
+.t-content-item-text:nth-child(2){
+    font-weight: 300;
+    color: rgb(0, 0, 0, 0.4);
+    font-size: 13px;
+}
+
+.lightblu{
+    background-color: lightblue;
+}
+
+.grey{
+    background-color: lightslategray;
+}
+
+.pink{
+    background-color: pink;
+}
